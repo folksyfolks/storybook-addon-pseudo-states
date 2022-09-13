@@ -67,10 +67,6 @@ export const rewriteStyleSheet = (sheet, shadowRoot, shadowHosts) => {
         if (shadowRoot) shadowHosts.add(shadowRoot.host)
       }
       index++
-      if (index > 1000) {
-        warnOnce("Reached maximum of 1000 pseudo selectors per sheet, skipping the rest.")
-        break
-      }
     }
   } catch (e) {
     if (e.toString().includes("cssRules")) {
