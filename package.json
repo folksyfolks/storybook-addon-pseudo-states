@@ -29,7 +29,7 @@
     "chromatic": "chromatic",
     "build:dist": "babel ./src --out-dir ./dist/cjs && BABEL_ESM=\"true\" babel ./src --out-dir ./dist/esm",
     "build:storybook": "build-storybook",
-    "prepare": "yarn clean && yarn build:dist",
+    "prepublish": "yarn clean && yarn build:dist",
     "release": "auto shipit --base-branch=main"
   },
   "dependencies": {},
