@@ -1,5 +1,11 @@
 <img src="https://user-images.githubusercontent.com/321738/105224055-f6c29c00-5b5c-11eb-83c9-ba28a7fbadf2.gif" width="80" height="80" alt="">
 
+# Informations
+
+Le package est comme celui de base mais avec une modification dans rewriteStyleSheet. Il y avait un arrêt du script rendu à 1000 modification de classes css. On a dût l'enlever car on dépasse ce nombre.
+
+Si on veut regénérer le contenu du dossier dist. Il est possible qu'il y ait un erreur en roulant yarn build:dist ou npm run build:dist. Celà est probablement dût au fichiers esm qui ne se génère pas correctement. Ceux dans cjs (common javascript) sont correct et preset.js est modifié pour loader ceux-là à la place. Si on est capable plus tard de faire fonctionner la génération des fichier esm, on pourra remodifier preset.js pour pointer à la bonne place.
+
 # Storybook Pseudo States
 
 Toggle CSS pseudo states for your components in Storybook.
